@@ -76,7 +76,8 @@ class Archivo:
       self.file.seek(0)
     
   def muestra_hexadecimal(self):
-    pass 
+    for line in self.file:
+      print(f"{line.encode('utf-8').hex()}") 
 
   def close(self):
     self.file.close() 
